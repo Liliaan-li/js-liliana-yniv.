@@ -1,0 +1,24 @@
+<html>
+<head>
+<title></title>
+</head>
+<script language="JavaScript">
+function colorchange()
+{
+head.style.color = "red";
+t1.style.color="red";
+}
+function colorback()
+{
+head.style.color ="black";
+t1.style.color ="black";
+}
+</script>
+</head>
+<body>
+<p id="t1" onMouseover="body.style.background='#E7E6D8'" onMouseOut="body.style.background='white'">Спасибо, что пришли к нам на курсы</p>
+<p id="head" onmouseover="colorchange()" onmouseout="colorback()">Последняя дата обновления <script type="text/javascript">
+  document.write(document.lastModified);
+</script></p>
+</body>
+</html>

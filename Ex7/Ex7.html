@@ -1,0 +1,30 @@
+<html>
+<head>
+<title></title>
+<script language="JavaScript">
+function les() {
+lesson=new Array("обществознание","психология","философия",
+"математика","физика","программирование");
+n=window.prompt("Введите предмет","Предмет");
+gum=new Array();
+gum=lesson.slice(0,3);
+tech=new Array();
+tech=lesson.slice(4);
+for(var i=0;i<5; i++)
+{
+  if(n===gum[i])
+  
+    {
+      document.write("Гуманитарные дисциплины:"+n+"."+"<br>");
+    }
+  else if(n===tech[i])
+    {
+      document.write("Технические дисциплины:"+n+"."+"<br>");
+    }
+}
+}
+</script>
+</head>
+<body onload="les()">
+</body>
+</html>

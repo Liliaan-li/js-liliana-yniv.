@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Ex14</title>
+<script type="text/javascript">
+  let at=y.IndexOf('@');
+  function SendForm() {
+  if (document.forms[0].name.value == "") {
+      alert('Пожалуйста, введите Ваше имя');
+      document.mailform.name.focus();
+      return false
+      }
+  if (document.forms[0].inp1.value == "") {
+      alert('Пожалуйста, введите пароль');
+      document.mailform.inp1.focus();
+      return false
+      }
+  if (document.forms[0].inp1.value.length<5) {
+      alert('Пожалуйста, введите пароль больше 4 символов ');
+      document.mailform.inp1.focus();
+      return false
+      }
+  if (document.forms[0].inp1.value!==document.forms[0].inp2.value ) {
+      alert('Пароли не совпадают ');
+      document.mailform.inp1.focus();
+      return false
+      }
+  if (document.forms[0].email.value == "") {
+      alert('Пожалуйста, введите электронный адрес');
+      document.mailform.email.focus();
+      return false
+      }
+      if (document.forms[0].email.value.includes("@")) {return true}
+          else { alert('Электронный адрес должен содержать @');
+          document.mailform.email.focus();
+          return false
+        }
+      if (document.forms[0].email.value[0]=="@") {
+      alert('Адрес не должен начинаться с @');
+      document.mailform.email.focus();
+      return true
+      }
+      if (document.forms[0].email.value[document.forms[0].email.value.length-1]=="@") {
+      alert('Адрес не должен заканчиваться на @');
+      document.mailform.email.focus();
+      return true
+      }
+  if (document.forms[0].message.value ="") {
+      alert('Напишите сообщение');
+      document.mailform.email.focus();
+      return false
+      }
+  if (document.forms[0].message.value.length<11) {
+      alert('Сообщение слишком короткое');
+      document.mailform.email.focus();
+      return false
+      }
+  return true;
+}
+</script>
+</head>
+<body>
+  <form onsubmit="return SendForm();">
+  <p>Ваше имя: *<input type="text" name="name"></p>
+  <p>Пароль*<input type="password" name="inp1" size=10 required></p>
+  <p>Потверждение пароля*<input type="password" id="inp2" size=10 required></p>
+  <p>Электронный адрес: *<input type="text" name="email"></p>
+  <p>Тема сообщения: <input type="text" name="subject"</p>
+  <p>Сообщение: *<textarea name="message"></textarea></p>
+
+  <input type="submit" value="Отправить">
+  <input type="reset" value="Очистить">
+
+  </form>
+<p>* - необходимые для заполнения поля</p>
+</body>
+</html>

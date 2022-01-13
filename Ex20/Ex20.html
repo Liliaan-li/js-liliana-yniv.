@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .o1{
+        z-index:1;
+        width:200px;
+        height:100px;
+        background-color:blue;
+        color:white;
+        margin-left:300px;
+        margin-top:50px;
+        font-size:50px;
+      }
+      #o2{
+        z-index:2;
+        position: absolute;
+        top: 70px;
+        height:150px;
+        width: 250px;
+      }
+      .o3{
+        z-index:3;
+        height:150px;
+        width:200px;
+        background-color:red;
+        color:white;
+        position:absolute;
+        left:200px;
+        top: 80px;
+        font-size:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="o1" src="8.jpg" alt="">Lorem
+    </div>
+    <img id="o2" src="8.jpg" alt="">
+    <script src="https://code.jquery.com/jquery-2.1.0.js">
+    </script>
+    <script type="text/javascript">
+      var leftOffset = 0;
+     var moveHeading = function () {
+     $("#o2").offset({ left: leftOffset });
+      leftOffset++;
+      if (leftOffset > 450) {
+        leftOffset = 0;
+      }
+     };
+     setInterval(moveHeading, 30);
+    </script>
+    <div class="o3" src="8.jpg" alt="">Lorem ipsum</div>
+  </body>
+</html>

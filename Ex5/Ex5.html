@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+a=0;
+function line1() {
+document.writeln("<hr align='center' color='darkgreen' width='"+(a+=9)+"'>");
+}
+b=0;
+function line2() {
+document.writeln("<hr align='center'color='darkgreen' width='"+(b+=12)+"'>");
+}
+c=0;
+function line3() {
+document.writeln("<hr align='center'color='darkgreen' width='"+(c+=15)+"'>");
+}
+function line4() {
+document.writeln("<hr align='center'color='brown' width='20'>");
+}
+for (var i=1; i<10; i++) line1();
+for (var i=1; i<10; i++) line2();
+for (var i=1; i<10; i++) line3();
+for (var i=1; i<4; i++) line4();
+
+</script>
+</body>
+</html>
